@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header Example</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <style>
+        body {
+            font-size: 16px;
+        }
+        .navbar-brand img {
+            width: 136px;
+        }
+        .navbar-toggler {
+            border: none;
+            outline: none;
+            height: 29px;
+        }
+        .navbar-toggler-icon {
+            width: 30px;
+            height: 3px;
+            background-color: black;
+            display: block;
+            position: relative;
+        }
+        .navbar-toggler-icon::before,
+        .navbar-toggler-icon::after {
+            content: '';
+            width: 30px;
+            height: 3px;
+            background-color: black;
+            display: block;
+            position: absolute;
+            left: 0;
+        }
+        .navbar-toggler-icon::before {
+            top: -10px;
+        }
+        .navbar-toggler-icon::after {
+            top: 10px;
+        }
+        .navbar-collapse {
+            justify-content: flex-end;
+        }
+        .profile-description {
+            max-width: 100%;
+            word-wrap: break-word;
+        }
+        table th, table td {
+            text-align: center;
+            vertical-align: middle;
+        }
+        .table {
+            color: black;
+        }
+        table>:not(caption)>*>* {
+            padding: 0.125rem 0.3rem!important;
+        }
+        table th {
+            padding-top: 0.5rem !important;
+            padding-bottom: 0.5rem !important;
+        }
+        table button,
+        .card button {
+            padding: 0.2rem 0.6rem!important;
+            background: linear-gradient(90deg, #FDD446, #F69B47)!important;
+            border-radius: 40px!important;
+            font-size: 0.3rem!important;
+            border: none!important;
+        }
+        .sample-card .card button {
+            font-size: 0.8rem!important;
+            color: black!important;
+            padding: 0.25rem 2.5rem!important;
+            margin-top: 0.5rem;
+            margin-left: auto!important;
+            margin-right: auto!important;
+            display: block;
+        }
+        .pagination .page-item {
+            font-size: 0.6rem !important;
+        }
+        .ivleeva-card {
+            -webkit-box-shadow: -146px 0px 89px -11px rgba(253,212,70,0.53);
+            -moz-box-shadow: -146px 0px 89px -11px rgba(253,212,70,0.53);
+            box-shadow: -146px 0px 89px -11px rgba(253,212,70,0.53);
+        }
+        .cards-list {
+            margin-top: -10px;
+        }
+        .footer {
+            -webkit-box-shadow: 0px -91px 89px -11px rgba(253,212,70,0.53);
+            -moz-box-shadow: 0px -91px 89px -11px rgba(253,212,70,0.53);
+            box-shadow: 0px -91px 89px -11px rgba(253,212,70,0.53);
+        }
+    </style>
+</head>
+<body>
+<!--Header-->
+<nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <div class="container">
+        <a href="#" class="navbar-brand">
+            <img src="assets/images/logo.png" alt="Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+            </ul>
+        </div>
+    </div>
+</nav>
+<!--Card-->
+<div class="container mt-4">
+    <div class="card border border-2 border-warning w-100 p-2" style="max-width: 100%; border-radius: 7px;">
+        <div class="row g-2">
+            <div class="col-3">
+                <img src="assets/images/ivleeva.png" class="img-fluid h-100 w-100 object-fit-contain" alt="Avatar">
+            </div>
+            <div class="col-9">
+                <div class="card-body p-0">
+                    <h5 class="card-title mb-0" style="font-size: 0.7rem">Ивлеева Анастасия</h5>
+                    <div class="d-flex align-items-center h-auto gap-1">
+                        <p class="card-text mb-0 text-warning" style="font-size: 0.5rem">проверено</p>
+                        <img width="7" height="7" src="assets/images/verified-icon.png" alt="Проверено"/>
+                    </div>
+                    <p class="mt-1 mb-0 lh-sm profile-description" style="font-size: 0.6rem">
+                        История о звезде. История о звезде.  История о звезде. История о звезде.
+                        История о звезде. История о звезде. История о звезде. История о звезде.
+                        История о звезде. История о звезде. История о звезде. История о звезде.
+                    </p>
+                    <p style="font-size: 0.6rem; margin-bottom: 2px;" class="mb-0">Всего коллекций: <span class="fw-bold text-decoration-underline">10</span></p>
+                    <p style="font-size: 0.6rem; margin-bottom: 2px;">
+                        Стоимость: от <span class="fw-bold text-decoration-underline">500 &#8381;</span> до <span class="fw-bold text-decoration-underline">1000000 &#8381;</span>
+                    </p>
+                    <h6 style="font-size: 0.6rem; margin-bottom: 3px;" class="fw-bold text-decoration-underline">Топовые коллекционеры</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ivleeva-card card border border-2 border-warning w-100 rounded-5 position-relative" style="margin-top: -8px; margin-bottom: -10px; border-radius: 9px; z-index: 3">
+        <div class="row">
+            <div class="col-12">
+                <table class="table table-bordered" style="font-size: 6px;">
+                    <thead>
+                    <tr>
+                        <th scope="col">Рейтинг</th>
+                        <th scope="col">ID/nickname</th>
+                        <th scope="col">Имя</th>
+                        <th scope="col">Сумма баллов</th>
+                        <th scope="col"></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row" style="font-size: 1.4em">#1</th>
+                        <td>
+                            <div class="d-flex align-items-center gap-1">
+                                <img src="assets/images/av1.png" alt="Аватар" width="16" height="16" class="rounded-circle">
+                                <a href="#" class="text-decoration-none text-body">@zwezda123...</a>
+                            </div>
+                        </td>
+                        <td>Варветкина Ангелина</td>
+                        <td><strong>845</strong></td>
+                        <td><button class="btn">Подробнее</button></td>
+                    </tr>
+                    <tr>
+                        <th scope="row" style="font-size: 1.4em">#2</th>
+                        <td class="text-secondary">Пользователь скрыт</td>
+                        <td class="text-secondary">Пользователь скрыт</td>
+                        <td><strong>800</strong></td>
+                        <td><button class="btn">Подробнее</button></td>
+                    </tr>
+                    <tr>
+                        <th scope="row" style="font-size: 1.4em">#3</th>
+                        <td>
+                            <div class="d-flex align-items-center gap-1">
+                                <img src="assets/images/av2.png" alt="Аватар" width="16" height="16" class="rounded-circle">
+                                <a href="#" class="text-decoration-none text-body">1234923452...</a>
+                            </div>
+                        </td>
+                        <td>Пучкова Анастасия</td>
+                        <td><strong>787</strong></td>
+                        <td><button class="btn">Подробнее</button></td>
+                    </tr>
+                    <tr>
+                        <th scope="row" style="font-size: 1.4em">#4</th>
+                        <td class="text-secondary">Пользователь скрыт</td>
+                        <td class="text-secondary">Пользователь скрыт</td>
+                        <td><strong>781</strong></td>
+                        <td><button class="btn">Подробнее</button></td>
+                    </tr>
+                    <tr>
+                        <th scope="row" style="font-size: 1.4em">#5</th>
+                        <td>
+                            <div class="d-flex align-items-center gap-1">
+                                <img src="assets/images/av2.png" alt="Аватар" width="16" height="16" class="rounded-circle">
+                                <a href="#" class="text-decoration-none text-body">124k948</a>
+                            </div>
+                        </td>
+                        <td>Мацуев Илья</td>
+                        <td><strong>743</strong></td>
+                        <td><button class="btn">Подробнее</button
+                        ></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <nav aria-label="Leaderboard navigation">
+            <ul class="pagination justify-content-center gap-1">
+                <li class="page-item">
+                    <a class="page-link text-body border-0" href="#" tabindex="-1" aria-disabled="true">«</a>
+                </li>
+                <li class="page-item"><a class="page-link text-body border-0 rounded-circle bg-warning d-block" href="#">1</a></li>
+                <li class="page-item"><a class="page-link text-body border-0" href="#">2</a></li>
+                <li class="page-item"><a class="page-link text-body border-0" href="#">3</a></li>
+                <li class="page-item"><a class="page-link text-body border-0" href="#">4</a></li>
+                <li class="page-item"><a class="page-link text-body border-0" href="#">5</a></li>
+                <li class="page-item">
+                    <a class="page-link text-body border-0" href="#">»</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+<!--Cards-->
+    <div class="container position-relative cards-list" style="z-index: 1; margin-bottom: 5rem">
+        <div class="row justify-content-between sample-card">
+            <div class="col-6 mb-3">
+                <div class="card p-2 rounded-0">
+                    <img src="assets/images/ivleeva-card.png" class="card-img-top" alt="Avatar">
+                    <div class="card-body p-0 justify-content-center align-items-center">
+                        <h5 class="card-title" style="font-size: 0.7rem">Без слов</h5>
+                        <div class="row gap-0">
+                            <div class="col-4">
+                                <img src="assets/images/ivleeva.png" class="img-fluid h-100" alt="Avatar">
+                            </div>
+                            <div class="col-8 p-0">
+                                <p style="font-size: 0.7rem" class="m-0">Настя Ивлеева Вячеславовна</p>
+                                <div class="d-flex align-items-center h-auto gap-1">
+                                    <p class="card-text mb-0 text-warning" style="font-size: 0.5rem">проверено</p>
+                                    <img width="7" height="7" src="assets/images/verified-icon.png" alt="Проверено"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-2">
+                            <p style="font-size: 0.7rem" class="m-0">Редкость:</p>
+                            <p style="font-size: 0.5rem; border-radius: 12px;" class="m-0 border border border-warning px-2 py-1">уникальная</p>
+                        </div>
+                        <div class="d-flex justify-content-between mt-2">
+                            <p style="font-size: 0.7rem" class="m-0">Цена:</p>
+                            <p style="font-size: 0.5rem; border-radius: 12px;" class="m-0 bg-warning px-2 py-1">от 500 &#8381;</p>
+                        </div>
+                        <button href="#" class="btn btn-primary">Купить</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 mb-3">
+                <div class="card p-2 rounded-0">
+                    <img src="assets/images/ivleeva-card.png" class="card-img-top" alt="Avatar">
+                    <div class="card-body p-0 justify-content-center align-items-center">
+                        <h5 class="card-title" style="font-size: 0.7rem">Без слов</h5>
+                        <div class="row gap-0">
+                            <div class="col-4">
+                                <img src="assets/images/ivleeva.png" class="img-fluid h-100" alt="Avatar">
+                            </div>
+                            <div class="col-8 p-0">
+                                <p style="font-size: 0.7rem" class="m-0">Настя Ивлеева Вячеславовна</p>
+                                <div class="d-flex align-items-center h-auto gap-1">
+                                    <p class="card-text mb-0 text-warning" style="font-size: 0.5rem">проверено</p>
+                                    <img width="7" height="7" src="assets/images/verified-icon.png" alt="Проверено"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-2">
+                            <p style="font-size: 0.7rem" class="m-0">Редкость:</p>
+                            <p style="font-size: 0.5rem; border-radius: 12px;" class="m-0 border border border-warning px-2 py-1">уникальная</p>
+                        </div>
+                        <div class="d-flex justify-content-between mt-2">
+                            <p style="font-size: 0.7rem" class="m-0">Цена:</p>
+                            <p style="font-size: 0.5rem; border-radius: 12px;" class="m-0 bg-warning px-2 py-1">от 500 &#8381;</p>
+                        </div>
+                        <button href="#" class="btn btn-primary">Купить</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 mb-3">
+                <div class="card p-2 rounded-0">
+                    <img src="assets/images/ivleeva-card.png" class="card-img-top" alt="Avatar">
+                    <div class="card-body p-0 justify-content-center align-items-center">
+                        <h5 class="card-title" style="font-size: 0.7rem">Без слов</h5>
+                        <div class="row gap-0">
+                            <div class="col-4">
+                                <img src="assets/images/ivleeva.png" class="img-fluid h-100" alt="Avatar">
+                            </div>
+                            <div class="col-8 p-0">
+                                <p style="font-size: 0.7rem" class="m-0">Настя Ивлеева Вячеславовна</p>
+                                <div class="d-flex align-items-center h-auto gap-1">
+                                    <p class="card-text mb-0 text-warning" style="font-size: 0.5rem">проверено</p>
+                                    <img width="7" height="7" src="assets/images/verified-icon.png" alt="Проверено"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-2">
+                            <p style="font-size: 0.7rem" class="m-0">Редкость:</p>
+                            <p style="font-size: 0.5rem; border-radius: 12px;" class="m-0 border border border-warning px-2 py-1">уникальная</p>
+                        </div>
+                        <div class="d-flex justify-content-between mt-2">
+                            <p style="font-size: 0.7rem" class="m-0">Цена:</p>
+                            <p style="font-size: 0.5rem; border-radius: 12px;" class="m-0 bg-warning px-2 py-1">от 500 &#8381;</p>
+                        </div>
+                        <button href="#" class="btn btn-primary">Купить</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 mb-3">
+                <div class="card p-2 rounded-0">
+                    <img src="assets/images/ivleeva-card.png" class="card-img-top" alt="Avatar">
+                    <div class="card-body p-0 justify-content-center align-items-center">
+                        <h5 class="card-title" style="font-size: 0.7rem">Без слов</h5>
+                        <div class="row gap-0">
+                            <div class="col-4">
+                                <img src="assets/images/ivleeva.png" class="img-fluid h-100" alt="Avatar">
+                            </div>
+                            <div class="col-8 p-0">
+                                <p style="font-size: 0.7rem" class="m-0">Настя Ивлеева Вячеславовна</p>
+                                <div class="d-flex align-items-center h-auto gap-1">
+                                    <p class="card-text mb-0 text-warning" style="font-size: 0.5rem">проверено</p>
+                                    <img width="7" height="7" src="assets/images/verified-icon.png" alt="Проверено"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-2">
+                            <p style="font-size: 0.7rem" class="m-0">Редкость:</p>
+                            <p style="font-size: 0.5rem; border-radius: 12px;" class="m-0 border border border-warning px-2 py-1">уникальная</p>
+                        </div>
+                        <div class="d-flex justify-content-between mt-2">
+                            <p style="font-size: 0.7rem" class="m-0">Цена:</p>
+                            <p style="font-size: 0.5rem; border-radius: 12px;" class="m-0 bg-warning px-2 py-1">от 500 &#8381;</p>
+                        </div>
+                        <button href="#" class="btn btn-primary">Купить</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 mb-3">
+                <div class="card p-2 rounded-0">
+                    <img src="assets/images/ivleeva-card.png" class="card-img-top" alt="Avatar">
+                    <div class="card-body p-0 justify-content-center align-items-center">
+                        <h5 class="card-title" style="font-size: 0.7rem">Без слов</h5>
+                        <div class="row gap-0">
+                            <div class="col-4">
+                                <img src="assets/images/ivleeva.png" class="img-fluid h-100" alt="Avatar">
+                            </div>
+                            <div class="col-8 p-0">
+                                <p style="font-size: 0.7rem" class="m-0">Настя Ивлеева Вячеславовна</p>
+                                <div class="d-flex align-items-center h-auto gap-1">
+                                    <p class="card-text mb-0 text-warning" style="font-size: 0.5rem">проверено</p>
+                                    <img width="7" height="7" src="assets/images/verified-icon.png" alt="Проверено"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-2">
+                            <p style="font-size: 0.7rem" class="m-0">Редкость:</p>
+                            <p style="font-size: 0.5rem; border-radius: 12px;" class="m-0 border border border-warning px-2 py-1">уникальная</p>
+                        </div>
+                        <div class="d-flex justify-content-between mt-2">
+                            <p style="font-size: 0.7rem" class="m-0">Цена:</p>
+                            <p style="font-size: 0.5rem; border-radius: 12px;" class="m-0 bg-warning px-2 py-1">от 500 &#8381;</p>
+                        </div>
+                        <button href="#" class="btn btn-primary">Купить</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 mb-3">
+                <div class="card p-2 rounded-0">
+                    <img src="assets/images/ivleeva-card.png" class="card-img-top" alt="Avatar">
+                    <div class="card-body p-0 justify-content-center align-items-center">
+                        <h5 class="card-title" style="font-size: 0.7rem">Без слов</h5>
+                        <div class="row gap-0">
+                            <div class="col-4">
+                                <img src="assets/images/ivleeva.png" class="img-fluid h-100" alt="Avatar">
+                            </div>
+                            <div class="col-8 p-0">
+                                <p style="font-size: 0.7rem" class="m-0">Настя Ивлеева Вячеславовна</p>
+                                <div class="d-flex align-items-center h-auto gap-1">
+                                    <p class="card-text mb-0 text-warning" style="font-size: 0.5rem">проверено</p>
+                                    <img width="7" height="7" src="assets/images/verified-icon.png" alt="Проверено"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-2">
+                            <p style="font-size: 0.7rem" class="m-0">Редкость:</p>
+                            <p style="font-size: 0.5rem; border-radius: 12px;" class="m-0 border border border-warning px-2 py-1">уникальная</p>
+                        </div>
+                        <div class="d-flex justify-content-between mt-2">
+                            <p style="font-size: 0.7rem" class="m-0">Цена:</p>
+                            <p style="font-size: 0.5rem; border-radius: 12px;" class="m-0 bg-warning px-2 py-1">от 500 &#8381;</p>
+                        </div>
+                        <button href="#" class="btn btn-primary">Купить</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 mb-3">
+                <div class="card p-2 rounded-0">
+                    <img src="assets/images/ivleeva-card.png" class="card-img-top" alt="Avatar">
+                    <div class="card-body p-0 justify-content-center align-items-center">
+                        <h5 class="card-title" style="font-size: 0.7rem">Без слов</h5>
+                        <div class="row gap-0">
+                            <div class="col-4">
+                                <img src="assets/images/ivleeva.png" class="img-fluid h-100" alt="Avatar">
+                            </div>
+                            <div class="col-8 p-0">
+                                <p style="font-size: 0.7rem" class="m-0">Настя Ивлеева Вячеславовна</p>
+                                <div class="d-flex align-items-center h-auto gap-1">
+                                    <p class="card-text mb-0 text-warning" style="font-size: 0.5rem">проверено</p>
+                                    <img width="7" height="7" src="assets/images/verified-icon.png" alt="Проверено"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-2">
+                            <p style="font-size: 0.7rem" class="m-0">Редкость:</p>
+                            <p style="font-size: 0.5rem; border-radius: 12px;" class="m-0 border border border-warning px-2 py-1">уникальная</p>
+                        </div>
+                        <div class="d-flex justify-content-between mt-2">
+                            <p style="font-size: 0.7rem" class="m-0">Цена:</p>
+                            <p style="font-size: 0.5rem; border-radius: 12px;" class="m-0 bg-warning px-2 py-1">от 500 &#8381;</p>
+                        </div>
+                        <button href="#" class="btn btn-primary">Купить</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 mb-3">
+                <div class="card p-2 rounded-0">
+                    <img src="assets/images/ivleeva-card.png" class="card-img-top" alt="Avatar">
+                    <div class="card-body p-0 justify-content-center align-items-center">
+                        <h5 class="card-title" style="font-size: 0.7rem">Без слов</h5>
+                        <div class="row gap-0">
+                            <div class="col-4">
+                                <img src="assets/images/ivleeva.png" class="img-fluid h-100" alt="Avatar">
+                            </div>
+                            <div class="col-8 p-0">
+                                <p style="font-size: 0.7rem" class="m-0">Настя Ивлеева Вячеславовна</p>
+                                <div class="d-flex align-items-center h-auto gap-1">
+                                    <p class="card-text mb-0 text-warning" style="font-size: 0.5rem">проверено</p>
+                                    <img width="7" height="7" src="assets/images/verified-icon.png" alt="Проверено"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-2">
+                            <p style="font-size: 0.7rem" class="m-0">Редкость:</p>
+                            <p style="font-size: 0.5rem; border-radius: 12px;" class="m-0 border border border-warning px-2 py-1">уникальная</p>
+                        </div>
+                        <div class="d-flex justify-content-between mt-2">
+                            <p style="font-size: 0.7rem" class="m-0">Цена:</p>
+                            <p style="font-size: 0.5rem; border-radius: 12px;" class="m-0 bg-warning px-2 py-1">от 500 &#8381;</p>
+                        </div>
+                        <button href="#" class="btn btn-primary">Купить</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 mb-3">
+                <div class="card p-2 rounded-0">
+                    <img src="assets/images/ivleeva-card.png" class="card-img-top" alt="Avatar">
+                    <div class="card-body p-0 justify-content-center align-items-center">
+                        <h5 class="card-title" style="font-size: 0.7rem">Без слов</h5>
+                        <div class="row gap-0">
+                            <div class="col-4">
+                                <img src="assets/images/ivleeva.png" class="img-fluid h-100" alt="Avatar">
+                            </div>
+                            <div class="col-8 p-0">
+                                <p style="font-size: 0.7rem" class="m-0">Настя Ивлеева Вячеславовна</p>
+                                <div class="d-flex align-items-center h-auto gap-1">
+                                    <p class="card-text mb-0 text-warning" style="font-size: 0.5rem">проверено</p>
+                                    <img width="7" height="7" src="assets/images/verified-icon.png" alt="Проверено"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-2">
+                            <p style="font-size: 0.7rem" class="m-0">Редкость:</p>
+                            <p style="font-size: 0.5rem; border-radius: 12px;" class="m-0 border border border-warning px-2 py-1">уникальная</p>
+                        </div>
+                        <div class="d-flex justify-content-between mt-2">
+                            <p style="font-size: 0.7rem" class="m-0">Цена:</p>
+                            <p style="font-size: 0.5rem; border-radius: 12px;" class="m-0 bg-warning px-2 py-1">от 500 &#8381;</p>
+                        </div>
+                        <button href="#" class="btn btn-primary">Купить</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 mb-3">
+                <div class="card p-2 rounded-0">
+                    <img src="assets/images/ivleeva-card.png" class="card-img-top" alt="Avatar">
+                    <div class="card-body p-0 justify-content-center align-items-center">
+                        <h5 class="card-title" style="font-size: 0.7rem">Без слов</h5>
+                        <div class="row gap-0">
+                            <div class="col-4">
+                                <img src="assets/images/ivleeva.png" class="img-fluid h-100" alt="Avatar">
+                            </div>
+                            <div class="col-8 p-0">
+                                <p style="font-size: 0.7rem" class="m-0">Настя Ивлеева Вячеславовна</p>
+                                <div class="d-flex align-items-center h-auto gap-1">
+                                    <p class="card-text mb-0 text-warning" style="font-size: 0.5rem">проверено</p>
+                                    <img width="7" height="7" src="assets/images/verified-icon.png" alt="Проверено"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-2">
+                            <p style="font-size: 0.7rem" class="m-0">Редкость:</p>
+                            <p style="font-size: 0.5rem; border-radius: 12px;" class="m-0 border border border-warning px-2 py-1">уникальная</p>
+                        </div>
+                        <div class="d-flex justify-content-between mt-2">
+                            <p style="font-size: 0.7rem" class="m-0">Цена:</p>
+                            <p style="font-size: 0.5rem; border-radius: 12px;" class="m-0 bg-warning px-2 py-1">от 500 &#8381;</p>
+                        </div>
+                        <button href="#" class="btn btn-primary">Купить</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 mb-3">
+                <div class="card p-2 rounded-0">
+                    <img src="assets/images/ivleeva-card.png" class="card-img-top" alt="Avatar">
+                    <div class="card-body p-0 justify-content-center align-items-center">
+                        <h5 class="card-title" style="font-size: 0.7rem">Без слов</h5>
+                        <div class="row gap-0">
+                            <div class="col-4">
+                                <img src="assets/images/ivleeva.png" class="img-fluid h-100" alt="Avatar">
+                            </div>
+                            <div class="col-8 p-0">
+                                <p style="font-size: 0.7rem" class="m-0">Настя Ивлеева Вячеславовна</p>
+                                <div class="d-flex align-items-center h-auto gap-1">
+                                    <p class="card-text mb-0 text-warning" style="font-size: 0.5rem">проверено</p>
+                                    <img width="7" height="7" src="assets/images/verified-icon.png" alt="Проверено"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-2">
+                            <p style="font-size: 0.7rem" class="m-0">Редкость:</p>
+                            <p style="font-size: 0.5rem; border-radius: 12px;" class="m-0 border border border-warning px-2 py-1">уникальная</p>
+                        </div>
+                        <div class="d-flex justify-content-between mt-2">
+                            <p style="font-size: 0.7rem" class="m-0">Цена:</p>
+                            <p style="font-size: 0.5rem; border-radius: 12px;" class="m-0 bg-warning px-2 py-1">от 500 &#8381;</p>
+                        </div>
+                        <button href="#" class="btn btn-primary">Купить</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 mb-3">
+                <div class="card p-2 rounded-0">
+                    <img src="assets/images/ivleeva-card.png" class="card-img-top" alt="Avatar">
+                    <div class="card-body p-0 justify-content-center align-items-center">
+                        <h5 class="card-title" style="font-size: 0.7rem">Без слов</h5>
+                        <div class="row gap-0">
+                            <div class="col-4">
+                                <img src="assets/images/ivleeva.png" class="img-fluid h-100" alt="Avatar">
+                            </div>
+                            <div class="col-8 p-0">
+                                <p style="font-size: 0.7rem" class="m-0">Настя Ивлеева Вячеславовна</p>
+                                <div class="d-flex align-items-center h-auto gap-1">
+                                    <p class="card-text mb-0 text-warning" style="font-size: 0.5rem">проверено</p>
+                                    <img width="7" height="7" src="assets/images/verified-icon.png" alt="Проверено"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-2">
+                            <p style="font-size: 0.7rem" class="m-0">Редкость:</p>
+                            <p style="font-size: 0.5rem; border-radius: 12px;" class="m-0 border border border-warning px-2 py-1">уникальная</p>
+                        </div>
+                        <div class="d-flex justify-content-between mt-2">
+                            <p style="font-size: 0.7rem" class="m-0">Цена:</p>
+                            <p style="font-size: 0.5rem; border-radius: 12px;" class="m-0 bg-warning px-2 py-1">от 500 &#8381;</p>
+                        </div>
+                        <button href="#" class="btn btn-primary">Купить</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 mb-3">
+                <div class="card p-2 rounded-0">
+                    <img src="assets/images/ivleeva-card.png" class="card-img-top" alt="Avatar">
+                    <div class="card-body p-0 justify-content-center align-items-center">
+                        <h5 class="card-title" style="font-size: 0.7rem">Без слов</h5>
+                        <div class="row gap-0">
+                            <div class="col-4">
+                                <img src="assets/images/ivleeva.png" class="img-fluid h-100" alt="Avatar">
+                            </div>
+                            <div class="col-8 p-0">
+                                <p style="font-size: 0.7rem" class="m-0">Настя Ивлеева Вячеславовна</p>
+                                <div class="d-flex align-items-center h-auto gap-1">
+                                    <p class="card-text mb-0 text-warning" style="font-size: 0.5rem">проверено</p>
+                                    <img width="7" height="7" src="assets/images/verified-icon.png" alt="Проверено"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-2">
+                            <p style="font-size: 0.7rem" class="m-0">Редкость:</p>
+                            <p style="font-size: 0.5rem; border-radius: 12px;" class="m-0 border border border-warning px-2 py-1">уникальная</p>
+                        </div>
+                        <div class="d-flex justify-content-between mt-2">
+                            <p style="font-size: 0.7rem" class="m-0">Цена:</p>
+                            <p style="font-size: 0.5rem; border-radius: 12px;" class="m-0 bg-warning px-2 py-1">от 500 &#8381;</p>
+                        </div>
+                        <button href="#" class="btn btn-primary">Купить</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 mb-3">
+                <div class="card p-2 rounded-0">
+                    <img src="assets/images/ivleeva-card.png" class="card-img-top" alt="Avatar">
+                    <div class="card-body p-0 justify-content-center align-items-center">
+                        <h5 class="card-title" style="font-size: 0.7rem">Без слов</h5>
+                        <div class="row gap-0">
+                            <div class="col-4">
+                                <img src="assets/images/ivleeva.png" class="img-fluid h-100" alt="Avatar">
+                            </div>
+                            <div class="col-8 p-0">
+                                <p style="font-size: 0.7rem" class="m-0">Настя Ивлеева Вячеславовна</p>
+                                <div class="d-flex align-items-center h-auto gap-1">
+                                    <p class="card-text mb-0 text-warning" style="font-size: 0.5rem">проверено</p>
+                                    <img width="7" height="7" src="assets/images/verified-icon.png" alt="Проверено"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-2">
+                            <p style="font-size: 0.7rem" class="m-0">Редкость:</p>
+                            <p style="font-size: 0.5rem; border-radius: 12px;" class="m-0 border border border-warning px-2 py-1">уникальная</p>
+                        </div>
+                        <div class="d-flex justify-content-between mt-2">
+                            <p style="font-size: 0.7rem" class="m-0">Цена:</p>
+                            <p style="font-size: 0.5rem; border-radius: 12px;" class="m-0 bg-warning px-2 py-1">от 500 &#8381;</p>
+                        </div>
+                        <button href="#" class="btn btn-primary">Купить</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 mb-3">
+                <div class="card p-2 rounded-0">
+                    <img src="assets/images/ivleeva-card.png" class="card-img-top" alt="Avatar">
+                    <div class="card-body p-0 justify-content-center align-items-center">
+                        <h5 class="card-title" style="font-size: 0.7rem">Без слов</h5>
+                        <div class="row gap-0">
+                            <div class="col-4">
+                                <img src="assets/images/ivleeva.png" class="img-fluid h-100" alt="Avatar">
+                            </div>
+                            <div class="col-8 p-0">
+                                <p style="font-size: 0.7rem" class="m-0">Настя Ивлеева Вячеславовна</p>
+                                <div class="d-flex align-items-center h-auto gap-1">
+                                    <p class="card-text mb-0 text-warning" style="font-size: 0.5rem">проверено</p>
+                                    <img width="7" height="7" src="assets/images/verified-icon.png" alt="Проверено"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-2">
+                            <p style="font-size: 0.7rem" class="m-0">Редкость:</p>
+                            <p style="font-size: 0.5rem; border-radius: 12px;" class="m-0 border border border-warning px-2 py-1">уникальная</p>
+                        </div>
+                        <div class="d-flex justify-content-between mt-2">
+                            <p style="font-size: 0.7rem" class="m-0">Цена:</p>
+                            <p style="font-size: 0.5rem; border-radius: 12px;" class="m-0 bg-warning px-2 py-1">от 500 &#8381;</p>
+                        </div>
+                        <button href="#" class="btn btn-primary">Купить</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 mb-3">
+                <div class="card p-2 rounded-0">
+                    <img src="assets/images/ivleeva-card.png" class="card-img-top" alt="Avatar">
+                    <div class="card-body p-0 justify-content-center align-items-center">
+                        <h5 class="card-title" style="font-size: 0.7rem">Без слов</h5>
+                        <div class="row gap-0">
+                            <div class="col-4">
+                                <img src="assets/images/ivleeva.png" class="img-fluid h-100" alt="Avatar">
+                            </div>
+                            <div class="col-8 p-0">
+                                <p style="font-size: 0.7rem" class="m-0">Настя Ивлеева Вячеславовна</p>
+                                <div class="d-flex align-items-center h-auto gap-1">
+                                    <p class="card-text mb-0 text-warning" style="font-size: 0.5rem">проверено</p>
+                                    <img width="7" height="7" src="assets/images/verified-icon.png" alt="Проверено"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-2">
+                            <p style="font-size: 0.7rem" class="m-0">Редкость:</p>
+                            <p style="font-size: 0.5rem; border-radius: 12px;" class="m-0 border border border-warning px-2 py-1">уникальная</p>
+                        </div>
+                        <div class="d-flex justify-content-between mt-2">
+                            <p style="font-size: 0.7rem" class="m-0">Цена:</p>
+                            <p style="font-size: 0.5rem; border-radius: 12px;" class="m-0 bg-warning px-2 py-1">от 500 &#8381;</p>
+                        </div>
+                        <button href="#" class="btn btn-primary">Купить</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 mb-3">
+                <div class="card p-2 rounded-0">
+                    <img src="assets/images/ivleeva-card.png" class="card-img-top" alt="Avatar">
+                    <div class="card-body p-0 justify-content-center align-items-center">
+                        <h5 class="card-title" style="font-size: 0.7rem">Без слов</h5>
+                        <div class="row gap-0">
+                            <div class="col-4">
+                                <img src="assets/images/ivleeva.png" class="img-fluid h-100" alt="Avatar">
+                            </div>
+                            <div class="col-8 p-0">
+                                <p style="font-size: 0.7rem" class="m-0">Настя Ивлеева Вячеславовна</p>
+                                <div class="d-flex align-items-center h-auto gap-1">
+                                    <p class="card-text mb-0 text-warning" style="font-size: 0.5rem">проверено</p>
+                                    <img width="7" height="7" src="assets/images/verified-icon.png" alt="Проверено"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-2">
+                            <p style="font-size: 0.7rem" class="m-0">Редкость:</p>
+                            <p style="font-size: 0.5rem; border-radius: 12px;" class="m-0 border border border-warning px-2 py-1">уникальная</p>
+                        </div>
+                        <div class="d-flex justify-content-between mt-2">
+                            <p style="font-size: 0.7rem" class="m-0">Цена:</p>
+                            <p style="font-size: 0.5rem; border-radius: 12px;" class="m-0 bg-warning px-2 py-1">от 500 &#8381;</p>
+                        </div>
+                        <button href="#" class="btn btn-primary">Купить</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 mb-3">
+                <div class="card p-2 rounded-0">
+                    <img src="assets/images/ivleeva-card.png" class="card-img-top" alt="Avatar">
+                    <div class="card-body p-0 justify-content-center align-items-center">
+                        <h5 class="card-title" style="font-size: 0.7rem">Без слов</h5>
+                        <div class="row gap-0">
+                            <div class="col-4">
+                                <img src="assets/images/ivleeva.png" class="img-fluid h-100" alt="Avatar">
+                            </div>
+                            <div class="col-8 p-0">
+                                <p style="font-size: 0.7rem" class="m-0">Настя Ивлеева Вячеславовна</p>
+                                <div class="d-flex align-items-center h-auto gap-1">
+                                    <p class="card-text mb-0 text-warning" style="font-size: 0.5rem">проверено</p>
+                                    <img width="7" height="7" src="assets/images/verified-icon.png" alt="Проверено"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-2">
+                            <p style="font-size: 0.7rem" class="m-0">Редкость:</p>
+                            <p style="font-size: 0.5rem; border-radius: 12px;" class="m-0 border border border-warning px-2 py-1">уникальная</p>
+                        </div>
+                        <div class="d-flex justify-content-between mt-2">
+                            <p style="font-size: 0.7rem" class="m-0">Цена:</p>
+                            <p style="font-size: 0.5rem; border-radius: 12px;" class="m-0 bg-warning px-2 py-1">от 500 &#8381;</p>
+                        </div>
+                        <button href="#" class="btn btn-primary">Купить</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 mb-3">
+                <div class="card p-2 rounded-0">
+                    <img src="assets/images/ivleeva-card.png" class="card-img-top" alt="Avatar">
+                    <div class="card-body p-0 justify-content-center align-items-center">
+                        <h5 class="card-title" style="font-size: 0.7rem">Без слов</h5>
+                        <div class="row gap-0">
+                            <div class="col-4">
+                                <img src="assets/images/ivleeva.png" class="img-fluid h-100" alt="Avatar">
+                            </div>
+                            <div class="col-8 p-0">
+                                <p style="font-size: 0.7rem" class="m-0">Настя Ивлеева Вячеславовна</p>
+                                <div class="d-flex align-items-center h-auto gap-1">
+                                    <p class="card-text mb-0 text-warning" style="font-size: 0.5rem">проверено</p>
+                                    <img width="7" height="7" src="assets/images/verified-icon.png" alt="Проверено"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-2">
+                            <p style="font-size: 0.7rem" class="m-0">Редкость:</p>
+                            <p style="font-size: 0.5rem; border-radius: 12px;" class="m-0 border border border-warning px-2 py-1">уникальная</p>
+                        </div>
+                        <div class="d-flex justify-content-between mt-2">
+                            <p style="font-size: 0.7rem" class="m-0">Цена:</p>
+                            <p style="font-size: 0.5rem; border-radius: 12px;" class="m-0 bg-warning px-2 py-1">от 500 &#8381;</p>
+                        </div>
+                        <button href="#" class="btn btn-primary">Купить</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 mb-3">
+                <div class="card p-2 rounded-0">
+                    <img src="assets/images/ivleeva-card.png" class="card-img-top" alt="Avatar">
+                    <div class="card-body p-0 justify-content-center align-items-center">
+                        <h5 class="card-title" style="font-size: 0.7rem">Без слов</h5>
+                        <div class="row gap-0">
+                            <div class="col-4">
+                                <img src="assets/images/ivleeva.png" class="img-fluid h-100" alt="Avatar">
+                            </div>
+                            <div class="col-8 p-0">
+                                <p style="font-size: 0.7rem" class="m-0">Настя Ивлеева Вячеславовна</p>
+                                <div class="d-flex align-items-center h-auto gap-1">
+                                    <p class="card-text mb-0 text-warning" style="font-size: 0.5rem">проверено</p>
+                                    <img width="7" height="7" src="assets/images/verified-icon.png" alt="Проверено"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-2">
+                            <p style="font-size: 0.7rem" class="m-0">Редкость:</p>
+                            <p style="font-size: 0.5rem; border-radius: 12px;" class="m-0 border border border-warning px-2 py-1">уникальная</p>
+                        </div>
+                        <div class="d-flex justify-content-between mt-2">
+                            <p style="font-size: 0.7rem" class="m-0">Цена:</p>
+                            <p style="font-size: 0.5rem; border-radius: 12px;" class="m-0 bg-warning px-2 py-1">от 500 &#8381;</p>
+                        </div>
+                        <button href="#" class="btn btn-primary">Купить</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 mb-3">
+                <div class="card p-2 rounded-0">
+                    <img src="assets/images/ivleeva-card.png" class="card-img-top" alt="Avatar">
+                    <div class="card-body p-0 justify-content-center align-items-center">
+                        <h5 class="card-title" style="font-size: 0.7rem">Без слов</h5>
+                        <div class="row gap-0">
+                            <div class="col-4">
+                                <img src="assets/images/ivleeva.png" class="img-fluid h-100" alt="Avatar">
+                            </div>
+                            <div class="col-8 p-0">
+                                <p style="font-size: 0.7rem" class="m-0">Настя Ивлеева Вячеславовна</p>
+                                <div class="d-flex align-items-center h-auto gap-1">
+                                    <p class="card-text mb-0 text-warning" style="font-size: 0.5rem">проверено</p>
+                                    <img width="7" height="7" src="assets/images/verified-icon.png" alt="Проверено"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-2">
+                            <p style="font-size: 0.7rem" class="m-0">Редкость:</p>
+                            <p style="font-size: 0.5rem; border-radius: 12px;" class="m-0 border border border-warning px-2 py-1">уникальная</p>
+                        </div>
+                        <div class="d-flex justify-content-between mt-2">
+                            <p style="font-size: 0.7rem" class="m-0">Цена:</p>
+                            <p style="font-size: 0.5rem; border-radius: 12px;" class="m-0 bg-warning px-2 py-1">от 500 &#8381;</p>
+                        </div>
+                        <button href="#" class="btn btn-primary">Купить</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 mb-3">
+                <div class="card p-2 rounded-0">
+                    <img src="assets/images/ivleeva-card.png" class="card-img-top" alt="Avatar">
+                    <div class="card-body p-0 justify-content-center align-items-center">
+                        <h5 class="card-title" style="font-size: 0.7rem">Без слов</h5>
+                        <div class="row gap-0">
+                            <div class="col-4">
+                                <img src="assets/images/ivleeva.png" class="img-fluid h-100" alt="Avatar">
+                            </div>
+                            <div class="col-8 p-0">
+                                <p style="font-size: 0.7rem" class="m-0">Настя Ивлеева Вячеславовна</p>
+                                <div class="d-flex align-items-center h-auto gap-1">
+                                    <p class="card-text mb-0 text-warning" style="font-size: 0.5rem">проверено</p>
+                                    <img width="7" height="7" src="assets/images/verified-icon.png" alt="Проверено"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-2">
+                            <p style="font-size: 0.7rem" class="m-0">Редкость:</p>
+                            <p style="font-size: 0.5rem; border-radius: 12px;" class="m-0 border border border-warning px-2 py-1">уникальная</p>
+                        </div>
+                        <div class="d-flex justify-content-between mt-2">
+                            <p style="font-size: 0.7rem" class="m-0">Цена:</p>
+                            <p style="font-size: 0.5rem; border-radius: 12px;" class="m-0 bg-warning px-2 py-1">от 500 &#8381;</p>
+                        </div>
+                        <button href="#" class="btn btn-primary">Купить</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 mb-3">
+                <div class="card p-2 rounded-0">
+                    <img src="assets/images/ivleeva-card.png" class="card-img-top" alt="Avatar">
+                    <div class="card-body p-0 justify-content-center align-items-center">
+                        <h5 class="card-title" style="font-size: 0.7rem">Без слов</h5>
+                        <div class="row gap-0">
+                            <div class="col-4">
+                                <img src="assets/images/ivleeva.png" class="img-fluid h-100" alt="Avatar">
+                            </div>
+                            <div class="col-8 p-0">
+                                <p style="font-size: 0.7rem" class="m-0">Настя Ивлеева Вячеславовна</p>
+                                <div class="d-flex align-items-center h-auto gap-1">
+                                    <p class="card-text mb-0 text-warning" style="font-size: 0.5rem">проверено</p>
+                                    <img width="7" height="7" src="assets/images/verified-icon.png" alt="Проверено"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-2">
+                            <p style="font-size: 0.7rem" class="m-0">Редкость:</p>
+                            <p style="font-size: 0.5rem; border-radius: 12px;" class="m-0 border border border-warning px-2 py-1">уникальная</p>
+                        </div>
+                        <div class="d-flex justify-content-between mt-2">
+                            <p style="font-size: 0.7rem" class="m-0">Цена:</p>
+                            <p style="font-size: 0.5rem; border-radius: 12px;" class="m-0 bg-warning px-2 py-1">от 500 &#8381;</p>
+                        </div>
+                        <button href="#" class="btn btn-primary">Купить</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 mb-3">
+                <div class="card p-2 rounded-0">
+                    <img src="assets/images/ivleeva-card.png" class="card-img-top" alt="Avatar">
+                    <div class="card-body p-0 justify-content-center align-items-center">
+                        <h5 class="card-title" style="font-size: 0.7rem">Без слов</h5>
+                        <div class="row gap-0">
+                            <div class="col-4">
+                                <img src="assets/images/ivleeva.png" class="img-fluid h-100" alt="Avatar">
+                            </div>
+                            <div class="col-8 p-0">
+                                <p style="font-size: 0.7rem" class="m-0">Настя Ивлеева Вячеславовна</p>
+                                <div class="d-flex align-items-center h-auto gap-1">
+                                    <p class="card-text mb-0 text-warning" style="font-size: 0.5rem">проверено</p>
+                                    <img width="7" height="7" src="assets/images/verified-icon.png" alt="Проверено"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-2">
+                            <p style="font-size: 0.7rem" class="m-0">Редкость:</p>
+                            <p style="font-size: 0.5rem; border-radius: 12px;" class="m-0 border border border-warning px-2 py-1">уникальная</p>
+                        </div>
+                        <div class="d-flex justify-content-between mt-2">
+                            <p style="font-size: 0.7rem" class="m-0">Цена:</p>
+                            <p style="font-size: 0.5rem; border-radius: 12px;" class="m-0 bg-warning px-2 py-1">от 500 &#8381;</p>
+                        </div>
+                        <button href="#" class="btn btn-primary">Купить</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 mb-3">
+                <div class="card p-2 rounded-0">
+                    <img src="assets/images/ivleeva-card.png" class="card-img-top" alt="Avatar">
+                    <div class="card-body p-0 justify-content-center align-items-center">
+                        <h5 class="card-title" style="font-size: 0.7rem">Без слов</h5>
+                        <div class="row gap-0">
+                            <div class="col-4">
+                                <img src="assets/images/ivleeva.png" class="img-fluid h-100" alt="Avatar">
+                            </div>
+                            <div class="col-8 p-0">
+                                <p style="font-size: 0.7rem" class="m-0">Настя Ивлеева Вячеславовна</p>
+                                <div class="d-flex align-items-center h-auto gap-1">
+                                    <p class="card-text mb-0 text-warning" style="font-size: 0.5rem">проверено</p>
+                                    <img width="7" height="7" src="assets/images/verified-icon.png" alt="Проверено"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-2">
+                            <p style="font-size: 0.7rem" class="m-0">Редкость:</p>
+                            <p style="font-size: 0.5rem; border-radius: 12px;" class="m-0 border border border-warning px-2 py-1">уникальная</p>
+                        </div>
+                        <div class="d-flex justify-content-between mt-2">
+                            <p style="font-size: 0.7rem" class="m-0">Цена:</p>
+                            <p style="font-size: 0.5rem; border-radius: 12px;" class="m-0 bg-warning px-2 py-1">от 500 &#8381;</p>
+                        </div>
+                        <button href="#" class="btn btn-primary">Купить</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 mb-3">
+                <div class="card p-2 rounded-0">
+                    <img src="assets/images/ivleeva-card.png" class="card-img-top" alt="Avatar">
+                    <div class="card-body p-0 justify-content-center align-items-center">
+                        <h5 class="card-title" style="font-size: 0.7rem">Без слов</h5>
+                        <div class="row gap-0">
+                            <div class="col-4">
+                                <img src="assets/images/ivleeva.png" class="img-fluid h-100" alt="Avatar">
+                            </div>
+                            <div class="col-8 p-0">
+                                <p style="font-size: 0.7rem" class="m-0">Настя Ивлеева Вячеславовна</p>
+                                <div class="d-flex align-items-center h-auto gap-1">
+                                    <p class="card-text mb-0 text-warning" style="font-size: 0.5rem">проверено</p>
+                                    <img width="7" height="7" src="assets/images/verified-icon.png" alt="Проверено"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-2">
+                            <p style="font-size: 0.7rem" class="m-0">Редкость:</p>
+                            <p style="font-size: 0.5rem; border-radius: 12px;" class="m-0 border border border-warning px-2 py-1">уникальная</p>
+                        </div>
+                        <div class="d-flex justify-content-between mt-2">
+                            <p style="font-size: 0.7rem" class="m-0">Цена:</p>
+                            <p style="font-size: 0.5rem; border-radius: 12px;" class="m-0 bg-warning px-2 py-1">от 500 &#8381;</p>
+                        </div>
+                        <button href="#" class="btn btn-primary">Купить</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav aria-label="Cards navigation">
+            <ul class="pagination justify-content-center gap-1">
+                <li class="page-item">
+                    <a class="page-link text-body border-0 bg-transparent px-3" style="font-size: 1.1rem" href="#" tabindex="-1" aria-disabled="true">«</a>
+                </li>
+                <li class="page-item"><a class="page-link text-body border-0 rounded-circle bg-warning d-block px-3" style="font-size: 1.1rem" href="#">1</a></li>
+                <li class="page-item"><a class="page-link text-body border-0 bg-transparent px-3" style="font-size: 1.1rem" href="#">2</a></li>
+                <li class="page-item"><a class="page-link text-body border-0 bg-transparent px-3" style="font-size: 1.1rem" href="#">3</a></li>
+                <li class="page-item"><a class="page-link text-body border-0 bg-transparent px-3" style="font-size: 1.1rem" href="#">4</a></li>
+                <li class="page-item"><a class="page-link text-body border-0 bg-transparent px-3" style="font-size: 1.1rem" href="#">5</a></li>
+                <li class="page-item">
+                    <a class="page-link text-body border-0 bg-transparent px-3" style="font-size: 1.1rem" href="#">»</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+<div class="footer bg-warning p-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-10">
+                <nav>
+                    <ul class="list" style="list-style: none">
+                        <li><a href="#" class="text-body text-decoration-none" style="font-size: 0.9rem">Что такое NFT</a></li>
+                        <li><a href="#" class="text-body text-decoration-none" style="font-size: 0.9rem">Создайте NFT с нами</a></li>
+                        <li><a href="#" class="text-body text-decoration-none" style="font-size: 0.9rem">О нас</a></li>
+                        <li><a href="#" class="text-body text-decoration-none" style="font-size: 0.9rem">Отправить запрос</a></li>
+                        <li><a href="#" class="text-body text-decoration-none" style="font-size: 0.9rem">Условия использования</a></li>
+                        <li><a href="#" class="text-body text-decoration-none" style="font-size: 0.9rem">Политика конфиденциальности</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-2">
+                <img src="assets/images/footer-logo.png" alt="Logo">
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
